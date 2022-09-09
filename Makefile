@@ -13,4 +13,5 @@ test-coverage:
 lint: 
 	npx eslint .	
 	
-.PHONY: test
+.PHONY: 
+	test

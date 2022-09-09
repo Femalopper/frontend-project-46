@@ -4,5 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/289c0c03d6d191f6410a/maintainability)](https://codeclimate.com/github/Femalopper/frontend-project-46/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/289c0c03d6d191f6410a/test_coverage)](https://codeclimate.com/github/Femalopper/frontend-project-46/test_coverage)
 
-### EXAMPLE
-<a href="https://asciinema.org/a/PnAZKQomnyIwtRAet5yhezqxd" target="_blank"><img src="https://asciinema.org/a/PnAZKQomnyIwtRAet5yhezqxd.svg" /></a>
+### JSON files comparison example
+[![asciicast](https://asciinema.org/a/PnAZKQomnyIwtRAet5yhezqxd.svg)](https://asciinema.org/a/PnAZKQomnyIwtRAet5yhezqxd)
+### YML files comparison example
+[![asciicast](https://asciinema.org/a/3ecNphbQcOVEVqPTs4WnF2s5T.svg)](https://asciinema.org/a/3ecNphbQcOVEVqPTs4WnF2s5T)
