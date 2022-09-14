@@ -18,18 +18,17 @@ const toStr = (node, curIndent) => {
   const {
     value, valBefore, valAfter, type, key,
   } = node;
+  const val = (v) => parseObj(v, curIndent);
   switch (type) {
     case 'unchanged':
       return value ? `  ${key}: ${value}` : '  ';
     case 'updated':
-      return _.isObject(valBefore) || _.isObject(valAfter)
-        ? `- ${key}: ${parseObj(valBefore, curIndent)}\n${curIndent}+ ${key}: ${parseObj(valAfter, curIndent)}`
-        : `- ${key}: ${valBefore}\n${curIndent}+ ${key}: ${valAfter}`;
+      return `- ${key}: ${val(valBefore)}\n${curIndent}+ ${key}: ${val(valAfter)}`;
     case 'removed':
-      return _.isObject(value) ? `- ${key}: ${parseObj(value, curIndent)}`
-        : `- ${key}: ${value}`;
-    default: return _.isObject(value) ? `+ ${key}: ${parseObj(value, curIndent)}`
-      : `+ ${key}: ${value}`;
+      return `- ${key}: ${val(value)}`;
+    default: {
+      return `+ ${key}: ${val(value)}`;
+    }
   }
 };
 
