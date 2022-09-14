@@ -4,13 +4,11 @@ import genJsonOutput from './json.js';
 
 const genOutput = (internalStructure, format) => {
   switch (format) {
-    case 'stylish':
-      return genStylishOutput(internalStructure);
     case 'plain':
       return genPlainOutput(internalStructure);
     case 'json':
       return genJsonOutput(internalStructure);
-    default: return 'Error. Please, enter correct format name.';
+    default: return genStylishOutput(internalStructure);
   }
 };
 

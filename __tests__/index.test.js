@@ -153,7 +153,6 @@ test('generate output', () => {
   expect(genOutput(internalStructure, 'stylish')).toEqual(readFile('expected_result1.txt'));
   expect(genOutput(internalStructure, 'plain')).toEqual(readFile('expected_result3.txt'));
   expect(genOutput(internalStructure, 'json')).toEqual(readFile('expected_JSON_result.json'));
-  expect(genOutput(internalStructure, 'jpeg')).toBe('Error. Please, enter correct format name.');
 });
 
 test('generate stylish output', () => {
