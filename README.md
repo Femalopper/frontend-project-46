@@ -4,7 +4,13 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/289c0c03d6d191f6410a/maintainability)](https://codeclimate.com/github/Femalopper/frontend-project-46/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/289c0c03d6d191f6410a/test_coverage)](https://codeclimate.com/github/Femalopper/frontend-project-46/test_coverage)
 
-### JSON files comparison example
+### JSON files comparison example (flat objects)
 [![asciicast](https://asciinema.org/a/PnAZKQomnyIwtRAet5yhezqxd.svg)](https://asciinema.org/a/PnAZKQomnyIwtRAet5yhezqxd)
-### YML files comparison example
+### YML files comparison example (flat objects)
 [![asciicast](https://asciinema.org/a/3ecNphbQcOVEVqPTs4WnF2s5T.svg)](https://asciinema.org/a/3ecNphbQcOVEVqPTs4WnF2s5T)
+### Nested objects comparison (output format - stylish)
+[![asciicast](https://asciinema.org/a/G2qZAKfGPIdttW7O2i0MvzK95.svg)](https://asciinema.org/a/G2qZAKfGPIdttW7O2i0MvzK95)
+### Nested objects comparison (output format - plain text)
+[![asciicast](https://asciinema.org/a/MBFHfij4HWPU4bpyLTSl0fW4K.svg)](https://asciinema.org/a/MBFHfij4HWPU4bpyLTSl0fW4K)
+### Nested objects comparison (output format - JSON)
+[![asciicast](https://asciinema.org/a/pmbeVkRfpqfgUtVeC0cqm6ANq.svg)](https://asciinema.org/a/pmbeVkRfpqfgUtVeC0cqm6ANq)
