@@ -21,11 +21,11 @@ const toStr = (node, curIndent) => {
   switch (type) {
     case 'unchanged':
       return value ? `  ${key}: ${value}` : '  ';
-    case 'changed':
+    case 'updated':
       return _.isObject(valBefore) || _.isObject(valAfter)
         ? `- ${key}: ${parseObj(valBefore, curIndent)}\n${curIndent}+ ${key}: ${parseObj(valAfter, curIndent)}`
         : `- ${key}: ${valBefore}\n${curIndent}+ ${key}: ${valAfter}`;
-    case 'deleted':
+    case 'removed':
       return _.isObject(value) ? `- ${key}: ${parseObj(value, curIndent)}`
         : `- ${key}: ${value}`;
     default: return _.isObject(value) ? `+ ${key}: ${parseObj(value, curIndent)}`
@@ -33,7 +33,7 @@ const toStr = (node, curIndent) => {
   }
 };
 
-const genOutput = (arrObjects, format, replacer = ' ', spacesCount = 2) => {
+const genStylishOutput = (arrObjects, replacer = ' ', spacesCount = 2) => {
   const output = arrObjects.map((obj) => {
     const makeStylish = (node, depth) => {
       const { key, type, children } = node;
@@ -53,4 +53,4 @@ const genOutput = (arrObjects, format, replacer = ' ', spacesCount = 2) => {
   return `{\n${output.join('\n')}\n}`;
 };
 
-export default genOutput;
+export default genStylishOutput;

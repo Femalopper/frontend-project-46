@@ -1,9 +1,9 @@
 import _ from 'lodash';
-import genOutput from './stylish.js';
-import readFile from './reader.js';
+import genOutput from './formatters/index.js';
+import readFiles from './reader.js';
 
-const genDiff = (filePath1, filPath2, format = 'stylish') => {
-  const [objFromFile1, objFromFile2] = readFile(filePath1, filPath2);
+const genDiff = (filePath1, filPath2, format) => {
+  const [objFromFile1, objFromFile2] = readFiles(filePath1, filPath2);
 
   const bldInternalStruct = (obj1, obj2) => {
     const newObj1 = _.cloneDeep(obj1);
@@ -24,7 +24,7 @@ const genDiff = (filePath1, filPath2, format = 'stylish') => {
       }
       if (!file2Keys.includes(key)) {
         return {
-          key, value: newObj1[key], type: 'deleted', children,
+          key, value: newObj1[key], type: 'removed', children,
         };
       }
       if (_.isObject(newObj1[key]) && _.isObject(newObj2[key])) {
@@ -34,7 +34,7 @@ const genDiff = (filePath1, filPath2, format = 'stylish') => {
       }
       if (newObj1[key] !== newObj2[key]) {
         return {
-          key, valBefore: newObj1[key], valAfter: newObj2[key], type: 'changed', children,
+          key, valBefore: newObj1[key], valAfter: newObj2[key], type: 'updated', children,
         };
       }
       return {
