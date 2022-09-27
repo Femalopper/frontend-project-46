@@ -33,9 +33,9 @@ npm install Femalopper/frontend-project-46
 1\. Input files: yaml, json.
 
 > The program accepts input arguments - the paths to yaml or json files. The paths taken are:
->   - absolute: gendiff /home/angel/frontend-project-46/__fixtures__/file1.json /home/angel/frontend-project-46/__fixtures__/file2.json</br>
+>   - absolute: gendiff  /home/angel/frontend-project-46/__fixtures__/file1.json  /home/angel/frontend-project-46/__fixtures__/file2.json</br>
 > or 
->   - relative: gendiff file1.json file2.json</br>
+>   - relative: gendiff  file1.json file2.json</br>
 > The reader and parser read and parse the taken paths into objects.
 
 2\. Output: plain text, stylish and json.
