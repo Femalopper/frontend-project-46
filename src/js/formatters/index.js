@@ -1,14 +1,15 @@
-import genStylishOutput from './stylish.js';
-import genPlainOutput from './plain.js';
-import genJsonOutput from './json.js';
+import genStylishOutput from "./stylish.js";
+import genPlainOutput from "./plain.js";
+import genJsonOutput from "./json.js";
 
 const genOutput = (internalStructure, format) => {
   switch (format) {
-    case 'plain':
+    case "plain":
       return genPlainOutput(internalStructure);
-    case 'json':
+    case "json":
       return genJsonOutput(internalStructure);
-    default: return genStylishOutput(internalStructure);
+    default:
+      return genStylishOutput(internalStructure);
   }
 };
 
