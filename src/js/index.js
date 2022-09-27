@@ -1,6 +1,6 @@
-import _ from "lodash";
-import genOutput from "./formatters/index.js";
-import readFiles from "./reader.js";
+import _ from 'lodash';
+import genOutput from './formatters/index.js';
+import readFiles from './reader.js';
 
 const genDiff = (filePath1, filPath2, format) => {
   const [objFromFile1, objFromFile2] = readFiles(filePath1, filPath2);
@@ -17,40 +17,35 @@ const genDiff = (filePath1, filPath2, format) => {
       const properties = [
         {
           value: obj2[key],
-          type: "added",
-          check: (key) => !file1Keys.includes(key),
+          type: 'added',
+          check: (k) => !file1Keys.includes(k),
         },
         {
           value: obj1[key],
-          type: "removed",
-          check: (key) => !file2Keys.includes(key),
+          type: 'removed',
+          check: (k) => !file2Keys.includes(k),
         },
         {
-          type: "nested",
-          check: (key) => _.isObject(obj1[key]) && _.isObject(obj2[key]),
+          type: 'nested',
+          check: (k) => _.isObject(obj1[key]) && _.isObject(obj2[k]),
         },
         {
           valBefore: obj1[key],
           valAfter: obj2[key],
-          type: "updated",
-          check: (key) => obj1[key] !== obj2[key],
+          type: 'updated',
+          check: (k) => obj1[key] !== obj2[k],
         },
         {
           value: obj1[key],
-          type: "unchanged",
-          check: (key) => obj1[key] === obj2[key],
+          type: 'unchanged',
+          check: (k) => obj1[key] === obj2[k],
         },
       ];
 
-      const getProperty = (key) => properties.find(({ check }) => check(key));
+      const getProperty = (k) => properties.find(({ check }) => check(k));
 
       const children = bldInternalStruct(obj1[key], obj2[key]);
-      const {
-        value = {},
-        valBefore = {},
-        valAfter = {},
-        type,
-      } = getProperty(key);
+      const { value = {}, valBefore = {}, valAfter = {}, type } = getProperty(key);
 
       return {
         key,

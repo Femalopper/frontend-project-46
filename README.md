@@ -16,7 +16,7 @@ make install
 sudo npm link
 ```
 
-OR
+**OR**
 
 ### Package setup 
 ```sh
@@ -24,26 +24,27 @@ npm install Femalopper/frontend-project-46
 ```
 
 ## Description
-Name of the package: gendiff
-Goal of the package: generation the differences between two data structures.
+**Name of the package**: @hexlet/code</br>
+**Goal of the package**: generation the differences between two data structures</br>
+**Launch name**: gendiff
 
-Input and output: 
+**Input and output**: 
 
-1. Input files: yaml, json.
+1\. Input files: yaml, json.
 
-The program accepts input arguments - the paths to yaml or json files. The paths taken are:
-- absolute: gendiff /home/angel/frontend-project-46/__fixtures__/file1.json /home/angel/frontend-project-46/__fixtures__/file2.json
-or 
-- relative: gendiff file1.json file2.json
-The reader and parser read and parse the taken paths into objects.
+> The program accepts input arguments - the paths to yaml or json files. The paths taken are:
+>   - absolute: gendiff /home/angel/frontend-project-46/__fixtures__/file1.json /home/angel/frontend-project-46/__fixtures__/file2.json
+> or 
+>   - relative: gendiff file1.json file2.json
+> The reader and parser read and parse the taken paths into objects.
 
-2. Output: plain text, stylish and json.
+2\. Output: plain text, stylish and json.
 
-The implemented formatters take input argument - the internal structure of the parsed objects. 
-The result output depends on the chosen format:
-- plain text
-- stylish
-- json
+> The implemented formatters take input argument - the internal structure of the parsed objects. 
+> The result output depends on the chosen format:
+>   - plain text
+>   - stylish
+>   - json
 
 ## Program Usage
 
