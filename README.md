@@ -26,7 +26,6 @@ npm install Femalopper/frontend-project-46
 ## Description
 ***Name of the package***: @hexlet/code</br>
 ***Goal of the package***: generation the differences between two data structures</br>
-***Launch name***: gendiff
 
 **Input and output**: 
 
